@@ -391,6 +391,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "bevy_ecs_tilemap"
+version = "0.6.0"
+source = "git+https://github.com/rparrett/bevy_ecs_tilemap?branch=bevy-0.8#a9250add72a845aa112dae78ea3c43112e8c0d3e"
+dependencies = [
+ "bevy",
+ "bytemuck",
+ "log",
+ "regex",
+]
+
+[[package]]
 name = "bevy_egui"
 version = "0.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2919,6 +2930,7 @@ name = "spqr-fortress"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "bevy_ecs_tilemap",
  "bevy_egui",
 ]
 

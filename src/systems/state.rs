@@ -1,8 +1,8 @@
 use bevy::{
-    core::Time,
     input::Input,
     prelude::{KeyCode, OrthographicProjection, Query, Res, With},
-    render::camera::Camera2d,
+    render::camera::Camera,
+    time::Time,
 };
 
 const CAMERA_SPEED_PER_SEC: f32 = 3.0;
@@ -11,7 +11,7 @@ const CAMERA_SPEED_PER_SEC: f32 = 3.0;
 pub fn camera_control(
     kb: Res<Input<KeyCode>>,
     time: Res<Time>,
-    mut query: Query<&mut OrthographicProjection, With<Camera2d>>,
+    mut query: Query<&mut OrthographicProjection, With<Camera>>,
 ) {
     let dist = CAMERA_SPEED_PER_SEC * time.delta().as_secs_f32();
 
